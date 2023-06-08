@@ -1,12 +1,2 @@
 # data1t
-All the works for DE.
-<<<<<<< HEAD
-Привет, меня зовут Марк.
-Я студент вуза в МО на втором курсе.
-На протяжении учебы изучал C/C++, C#, Java, Python.
-Хочу в курсе полноценный путь от нуля до джуна.
-Играю на синтезаторе.
-Я нигде не работаю.
-Хочу разобраться с Pull request.
-=======
->>>>>>> parent of bf6b337 (Secomd commit with new info)
+All the works for DE. 
