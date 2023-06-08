@@ -1,5 +1,6 @@
 # data1t
 All the works for DE.
+<<<<<<< HEAD
 Привет, меня зовут Марк.
 Я студент вуза в МО на втором курсе.
 На протяжении учебы изучал C/C++, C#, Java, Python.
@@ -7,3 +8,5 @@ All the works for DE.
 Играю на синтезаторе.
 Я нигде не работаю.
 Хочу разобраться с Pull request.
+=======
+>>>>>>> parent of bf6b337 (Secomd commit with new info)
