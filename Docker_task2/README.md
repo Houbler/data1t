@@ -9,9 +9,9 @@
  
  Необходимо:
  1) Установить Docker:
- https://www.docker.com/products/docker-desktop/
+ *https://www.docker.com/products/docker-desktop/*
  2) Скачать архив:
- https://github.com/Houbler/data1t
+ *https://github.com/Houbler/data1t*
  3) Установить его в нужную папку и ввести в терминале следующую команду:
  *docker-compose up -d & docker logs docker_task2-pythonscr-1*
  (Построение и запуск docker-compose и просмотр журнала выполнения Python-файлa.
