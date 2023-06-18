@@ -1,0 +1,30 @@
+version: '2.0'
+services:
+  app:
+    build: ./database 
+    depends_on:
+      database: 
+        condition: service_healthy
+    links:
+      - database
+  database:
+    image: postgres:latest
+    build: ./database
+    ports: 
+      - 5432:5432
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: database
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "user"]
+      interval: 5s
+      retries: 5
+    restart: always
+  pythonscr:
+    build: ./python
+    depends_on:
+      database: 
+        condition: service_healthy
+    links:
+      - database
