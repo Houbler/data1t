@@ -1,5 +1,5 @@
 FROM python:latest
-WORKDIR ./python
+WORKDIR /python
 COPY . .
 RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
