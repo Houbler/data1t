@@ -42,5 +42,5 @@ CREATE TABLE IF NOT EXISTS public.transfer (
     FOREIGN KEY (reader) REFERENCES reader (library_card) ON DELETE SET NULL,
     FOREIGN KEY (book) REFERENCES books (book_code) ON DELETE SET NULL,
     transfer_date DATE NOT NULL,
-    return_date DATE NOT NULL
+    return_date DATE
 );
