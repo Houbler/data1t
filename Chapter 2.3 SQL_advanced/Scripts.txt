@@ -1,0 +1,46 @@
+###1)Определить, сколько книг прочитал каждый читатель в текущем году. Вывести рейтинг читателей по убыванию.
+select reader_name, count(t.return_date) as amount_read
+from reader r 
+join transfer t on r.library_card = t.reader
+group by reader_name 
+order by amount_read desc
+
+###2)Определить, сколько книг у читателей на руках на текущую дату.
+select Count(title) from books b 
+join transfer t on t.book = b.book_code and t.return_date is null
+
+###3)Определить читателей, у которых на руках определенная книга.
+select r.reader_name, b.title, t.transfer_date, t.return_date from reader r
+join transfer t on t.reader = r.library_card and t.return_date is null
+join books b on b.book_code = t.book 
+
+###4)Определите, какие книги на руках читателей.
+select title, r.reader_name  from books b 
+join transfer t on t.book = b.book_code and t.return_date is null
+join reader r on r.library_card = t.reader  
+
+###5)Вывести количество должников на текущую дату. 
+select count(library_card) as debtors from reader r 
+join transfer t on t.reader = r.library_card 
+where t.return_date is null and current_date - t.transfer_date > 14
+
+###6)Книги какого издательства были самыми востребованными у читателей? Отсортируйте издательства по убыванию востребованности книг.
+select publisher_name, count(transfer_id) as amount from publisher p 
+join books b on p.publisher_id = b.publisher 
+join transfer t on t.book = b.book_code
+group by publisher_name
+order by amount desc
+
+###7)Определить самого издаваемого автора.
+select author_name, count(ab.book_id) as amount from author a 
+join authors_books ab on ab.author_id = a.author_id 	
+group by author_name
+order by amount desc
+
+###8)Определить среднее количество прочитанных страниц читателем за день.
+select reader_name, avg(b.pages / (t.return_date - t.transfer_date)) as avg_pages from transfer t 
+join books b on b.book_code = t.book
+join reader r on t.reader = r.library_card  
+where t.return_date is not null
+group by reader_name
+order by avg_pages desc 
