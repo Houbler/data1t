@@ -14,9 +14,9 @@
  - Графическая структура файла БД.
 	[Диаграмма](diagram.jpg)
  - Sql-cкрипт для создания таблиц БД (DDL)
-	[DDL](database\DDL\DDL.sql).
+	[DDL](database/DDL/DDL.sql).
  - Sql-cкрипт для заполнения таблиц (DML).
-	[DML](database\DML\DML.sql).
+	[DML](database/DML/DML.sql).
  - Файл docker-compose.
 	[Docker](docker-compose.yml)
  - Файл со скриптами SQL для построения витрины.
