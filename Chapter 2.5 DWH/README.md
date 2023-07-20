@@ -18,10 +18,13 @@
  - Sql-cкрипт для заполнения таблиц (DML).
 	[DML](database\DML\DML.sql).
  - Файл docker-compose.
+	[Docker](docker-compose.yml)
  - Файл со скриптами SQL для построения витрины.
 	[SQL-запрос](SQL_Script.sql)
  
  Данные для поднятия docker-compose:
- Database - db
+ Database - db 
+ 
  User - user
+ 
  Password - secret
