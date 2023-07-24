@@ -1,0 +1,11 @@
+- сборка образа
+docker build -t test_image:latest .		
+
+- создаем контейнер из образа					
+docker run -d -p 5432:5432 --name test test_image:latest
+
+- подключаемся к контейнеру и используем интерфейс psql
+docker exec -it test psql -U user database					
+
+Путь:
+D:\Git_reps\data1t\Docker_task1
