@@ -1,0 +1,49 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5434:5432
+    container_name: psql
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: db
+    networks:
+      - clickhouse
+    volumes:
+      - ./postgres/database/DDL/DDLscr.sql:/docker-entrypoint-initdb.d/DDLscr.sql
+      - ./postgres/database/DML/DMLscr.sql:/docker-entrypoint-initdb.d/DMLscr.sql    
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "db"]
+      interval: 5s
+      retries: 5
+    restart: always
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    networks:
+        - clickhouse
+    ulimits:
+        nofile:
+          soft: 262144
+          hard: 262144 
+    ports:  
+      - "8123:8123"
+    volumes:
+      - ./clickhouse/scheme.sql:/docker-entrypoint-initdb.d/scheme.sql
+      - "clickhouse-data:/var/lib/clickhouse"
+
+  click-ui:
+    image: spoonest/clickhouse-tabix-web-client
+    networks:
+        - clickhouse
+    depends_on:
+      - clickhouse
+    ports:
+      - "8124:80"
+    restart: always
+volumes:
+  clickhouse-data:
+networks:
+    clickhouse:
