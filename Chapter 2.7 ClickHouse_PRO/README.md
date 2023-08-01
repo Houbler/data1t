@@ -7,9 +7,9 @@
  - Docker-compose файла.
 	[Docker](docker-compose.yml)
  - Sql-cкрипт для создания таблиц БД Postgres(DDL)
-	[PSQL DDL](database/DDL/DDL.sql).
+	[PSQL DDL](postgres/database/DDL/DDL.sql).
  - Sql-cкрипт для заполнения таблиц Postgres(DML).
-	[PSQL DML](database/DML/DML.sql).
+	[PSQL DML](postgres/database/DML/DML.sql).
  - Sql-cкрипт для миграции схемы в Clickhouse.
 	[Clickhouse SQL](clickhouse/scheme.sql)
  - Sql-cкрипт для просмотра витрины в Clickhouse.
