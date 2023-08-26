@@ -26,11 +26,11 @@ Postgres:
  - Sql-cкрипт для заполнения таблиц слоя source(DML).
 	[PSQL DML source](postgres/source/aDML_source.sql).
  - Sql-cкрипт для создания таблиц слоя core(DDL) 
-	[PSQL DDL core](postgres/core/bDDL_core).
+	[PSQL DDL core](postgres/core/bDDL_core.sql).
  - Sql-cкрипт для заполнения таблиц слоя core(DML).
-	[PSQL DML core](postgres/core/bDML_core).
+	[PSQL DML core](postgres/core/bDML_core.sql).
  - Sql-cкрипт для создания витрины данных слоя mart.
-	[PSQL DML source](postgres/mart/cmart.sql).
+	[PSQL mart](postgres/mart/cmart.sql).
  - Sql-cкрипт для миграции схемы в Clickhouse.
 	[Clickhouse SQL](clickhouse/scheme.sql)
 Diagrams:
