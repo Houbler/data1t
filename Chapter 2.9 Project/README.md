@@ -17,9 +17,11 @@
  - Также вам необходимо приложить к решению логическую модель вашего DWH в виде ER-диаграммы, а также README-файл с описанием логики работы приложения. 
 
 Этот проект состоит из:
+
 Docker:
  - Docker-compose файла.
 	[Docker](docker-compose.yml)
+	
 Postgres:
  - Sql-cкрипт для создания таблиц слоя source(DDL) 
 	[PSQL DDL source](postgres/source/aDDL_source.sql).
@@ -33,15 +35,16 @@ Postgres:
 	[PSQL mart](postgres/mart/cmart.sql).
  - Sql-cкрипт для миграции схемы в Clickhouse.
 	[Clickhouse SQL](clickhouse/scheme.sql)
+	
 Diagrams:
  -  [Логическая структура](ER-diagram/Logic.jpg)
  -  [Графическая структура](ER-diagram/Graph.jpg)
 	
 Пояснение:
-Данные в БД вносятся в слой source с помощью Insert;
-Слой Core формируется из данных, лежащих на слое source;
-Создается таблица mart на слое MART на основе данных core;
-В Clickhouse мигрируют данные из Postgres.
+ - Данные в БД вносятся в слой source с помощью Insert;
+ - Слой Core формируется из данных, лежащих на слое source;
+ - Создается таблица mart на слое MART на основе данных core;
+ - В Clickhouse мигрируют данные из Postgres.
 
 Данные для входа Postgres database:
  Database - db 
