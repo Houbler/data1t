@@ -1,0 +1,19 @@
+version: "2.0"
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    container_name: psql_itog
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: db_itog
+    volumes:
+      - ./psql/DDL.sql:/docker-entrypoint-initdb.d/DDL.sql
+      - ./raw_data/:/test/raw/
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "user", "-d", "db_itog"]
+      interval: 5s
+      retries: 5
+    restart: always
