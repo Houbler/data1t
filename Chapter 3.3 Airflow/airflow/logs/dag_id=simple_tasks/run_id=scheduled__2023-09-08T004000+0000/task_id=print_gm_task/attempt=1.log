@@ -1,0 +1,51 @@
+[2023-09-10T17:54:14.281+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-08T00:40:00+00:00 [queued]>
+[2023-09-10T17:54:14.322+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-08T00:40:00+00:00 [queued]>
+[2023-09-10T17:54:14.339+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2023-09-10T17:54:14.545+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): print_gm_task> on 2023-09-08 00:40:00+00:00
+[2023-09-10T17:54:15.206+0000] {standard_task_runner.py:57} INFO - Started process 185 to run task
+[2023-09-10T17:54:15.449+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'simple_tasks', 'print_gm_task', 'scheduled__2023-09-08T00:40:00+00:00', '--job-id', '145', '--raw', '--subdir', 'DAGS_FOLDER/script.py', '--cfg-path', '/tmp/tmpx2li0uv6']
+[2023-09-10T17:54:15.670+0000] {standard_task_runner.py:85} INFO - Job 145: Subtask print_gm_task
+[2023-09-10T17:54:18.187+0000] {task_command.py:415} INFO - Running <TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-08T00:40:00+00:00 [running]> on host 3152b479582c
+[2023-09-10T17:54:18.745+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='simple_tasks' AIRFLOW_CTX_TASK_ID='print_gm_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-08T00:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-08T00:40:00+00:00'
+[2023-09-10T17:54:18.753+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-09-10T17:54:18.781+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Good morning, my diggers!"']
+[2023-09-10T17:54:18.875+0000] {subprocess.py:86} INFO - Output:
+[2023-09-10T17:54:19.168+0000] {subprocess.py:93} INFO - Good morning, my diggers!
+[2023-09-10T17:54:19.170+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-09-10T17:54:19.370+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=simple_tasks, task_id=print_gm_task, execution_date=20230908T004000, start_date=20230910T175414, end_date=20230910T175419
+[2023-09-10T17:54:20.194+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-10T17:54:20.316+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-09-11T08:05:33.378+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-08T00:40:00+00:00 [queued]>
+[2023-09-11T08:05:33.451+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-08T00:40:00+00:00 [queued]>
+[2023-09-11T08:05:33.457+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2023-09-11T08:05:33.725+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): print_gm_task> on 2023-09-08 00:40:00+00:00
+[2023-09-11T08:05:33.749+0000] {standard_task_runner.py:57} INFO - Started process 86 to run task
+[2023-09-11T08:05:33.831+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'simple_tasks', 'print_gm_task', 'scheduled__2023-09-08T00:40:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/script.py', '--cfg-path', '/tmp/tmp6lejavag']
+[2023-09-11T08:05:33.913+0000] {standard_task_runner.py:85} INFO - Job 4: Subtask print_gm_task
+[2023-09-11T08:05:34.926+0000] {task_command.py:415} INFO - Running <TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-08T00:40:00+00:00 [running]> on host 2c457fbd3561
+[2023-09-11T08:05:36.929+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='simple_tasks' AIRFLOW_CTX_TASK_ID='print_gm_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-08T00:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-08T00:40:00+00:00'
+[2023-09-11T08:05:37.149+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-09-11T08:05:37.201+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Good morning, my diggers!"']
+[2023-09-11T08:05:37.772+0000] {subprocess.py:86} INFO - Output:
+[2023-09-11T08:05:38.185+0000] {subprocess.py:93} INFO - Good morning, my diggers!
+[2023-09-11T08:05:38.197+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-09-11T08:05:38.552+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=simple_tasks, task_id=print_gm_task, execution_date=20230908T004000, start_date=20230911T080533, end_date=20230911T080538
+[2023-09-11T08:05:43.743+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-11T08:05:43.971+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-09-11T08:17:02.079+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-08T00:40:00+00:00 [queued]>
+[2023-09-11T08:17:02.121+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-08T00:40:00+00:00 [queued]>
+[2023-09-11T08:17:02.126+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2023-09-11T08:17:02.510+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): print_gm_task> on 2023-09-08 00:40:00+00:00
+[2023-09-11T08:17:02.536+0000] {standard_task_runner.py:57} INFO - Started process 110 to run task
+[2023-09-11T08:17:02.587+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'simple_tasks', 'print_gm_task', 'scheduled__2023-09-08T00:40:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/script.py', '--cfg-path', '/tmp/tmp_67npgfy']
+[2023-09-11T08:17:02.637+0000] {standard_task_runner.py:85} INFO - Job 7: Subtask print_gm_task
+[2023-09-11T08:17:03.104+0000] {task_command.py:415} INFO - Running <TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-08T00:40:00+00:00 [running]> on host 47888c058366
+[2023-09-11T08:17:07.655+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='simple_tasks' AIRFLOW_CTX_TASK_ID='print_gm_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-08T00:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-08T00:40:00+00:00'
+[2023-09-11T08:17:07.807+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-09-11T08:17:07.813+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Good morning, my diggers!"']
+[2023-09-11T08:17:08.085+0000] {subprocess.py:86} INFO - Output:
+[2023-09-11T08:17:09.199+0000] {subprocess.py:93} INFO - Good morning, my diggers!
+[2023-09-11T08:17:09.201+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-09-11T08:17:09.535+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=simple_tasks, task_id=print_gm_task, execution_date=20230908T004000, start_date=20230911T081702, end_date=20230911T081709
+[2023-09-11T08:17:09.730+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-11T08:17:09.861+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

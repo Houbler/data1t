@@ -1,0 +1,40 @@
+[2023-09-12T14:50:16.398+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-12T14:50:00+00:00 [queued]>
+[2023-09-12T14:50:16.405+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-12T14:50:00+00:00 [queued]>
+[2023-09-12T14:50:16.406+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2023-09-12T14:50:16.421+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): print_gm_task> on 2023-09-12 14:50:00+00:00
+[2023-09-12T14:50:16.471+0000] {standard_task_runner.py:57} INFO - Started process 922 to run task
+[2023-09-12T14:50:16.478+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'simple_tasks', 'print_gm_task', 'scheduled__2023-09-12T14:50:00+00:00', '--job-id', '170', '--raw', '--subdir', 'DAGS_FOLDER/script.py', '--cfg-path', '/tmp/tmp6q05yjpv']
+[2023-09-12T14:50:16.481+0000] {standard_task_runner.py:85} INFO - Job 170: Subtask print_gm_task
+[2023-09-12T14:50:16.530+0000] {task_command.py:415} INFO - Running <TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-12T14:50:00+00:00 [running]> on host fbfbca5b9527
+[2023-09-12T14:50:16.609+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='simple_tasks' AIRFLOW_CTX_TASK_ID='print_gm_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-12T14:50:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-12T14:50:00+00:00'
+[2023-09-12T14:50:16.611+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-09-12T14:50:16.612+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Good morning, my diggers!"']
+[2023-09-12T14:50:16.621+0000] {subprocess.py:86} INFO - Output:
+[2023-09-12T14:50:16.622+0000] {subprocess.py:93} INFO - Good morning, my diggers!
+[2023-09-12T14:50:16.624+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-09-12T14:50:16.646+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=simple_tasks, task_id=print_gm_task, execution_date=20230912T145000, start_date=20230912T145016, end_date=20230912T145016
+[2023-09-12T14:50:16.690+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-12T14:50:16.711+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-09-12T22:10:03.844+0000] {logging_mixin.py:151} INFO - Changing /opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-12T14:50:00+00:00/task_id=print_gm_task permission to 509
+[2023-09-12T22:10:03.866+0000] {logging_mixin.py:151} INFO - Failed to change /opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-12T14:50:00+00:00/task_id=print_gm_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-12T14:50:00+00:00/task_id=print_gm_task'
+[2023-09-12T22:10:04.726+0000] {logging_mixin.py:151} INFO - Changing /opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-12T14:50:00+00:00/task_id=print_gm_task permission to 509
+[2023-09-12T22:10:04.747+0000] {logging_mixin.py:151} INFO - Failed to change /opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-12T14:50:00+00:00/task_id=print_gm_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-12T14:50:00+00:00/task_id=print_gm_task'
+[2023-09-12T22:10:04.990+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-12T14:50:00+00:00 [queued]>
+[2023-09-12T22:10:05.062+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-12T14:50:00+00:00 [queued]>
+[2023-09-12T22:10:05.143+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2023-09-12T22:10:05.222+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): print_gm_task> on 2023-09-12 14:50:00+00:00
+[2023-09-12T22:10:05.294+0000] {standard_task_runner.py:57} INFO - Started process 101 to run task
+[2023-09-12T22:10:05.372+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'simple_tasks', 'print_gm_task', 'scheduled__2023-09-12T14:50:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/script.py', '--cfg-path', '/tmp/tmp4pyvd6n2']
+[2023-09-12T22:10:05.539+0000] {standard_task_runner.py:85} INFO - Job 9: Subtask print_gm_task
+[2023-09-12T22:10:06.613+0000] {logging_mixin.py:151} INFO - Changing /opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-12T14:50:00+00:00/task_id=print_gm_task permission to 509
+[2023-09-12T22:10:06.629+0000] {logging_mixin.py:151} INFO - Failed to change /opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-12T14:50:00+00:00/task_id=print_gm_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-12T14:50:00+00:00/task_id=print_gm_task'
+[2023-09-12T22:10:06.654+0000] {task_command.py:415} INFO - Running <TaskInstance: simple_tasks.print_gm_task scheduled__2023-09-12T14:50:00+00:00 [running]> on host 8df8606c974e
+[2023-09-12T22:10:08.466+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='simple_tasks' AIRFLOW_CTX_TASK_ID='print_gm_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-12T14:50:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-12T14:50:00+00:00'
+[2023-09-12T22:10:08.476+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-09-12T22:10:08.496+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Good morning, my diggers!"']
+[2023-09-12T22:10:08.579+0000] {subprocess.py:86} INFO - Output:
+[2023-09-12T22:10:08.582+0000] {subprocess.py:93} INFO - Good morning, my diggers!
+[2023-09-12T22:10:08.583+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-09-12T22:10:08.676+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=simple_tasks, task_id=print_gm_task, execution_date=20230912T145000, start_date=20230912T221005, end_date=20230912T221008
+[2023-09-12T22:10:08.798+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-12T22:10:08.904+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

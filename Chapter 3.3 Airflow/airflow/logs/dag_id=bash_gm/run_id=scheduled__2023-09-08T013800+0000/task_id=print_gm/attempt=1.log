@@ -1,0 +1,17 @@
+[2023-09-10T17:04:10.750+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: bash_gm.print_gm scheduled__2023-09-08T01:38:00+00:00 [queued]>
+[2023-09-10T17:04:10.766+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: bash_gm.print_gm scheduled__2023-09-08T01:38:00+00:00 [queued]>
+[2023-09-10T17:04:10.768+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2023-09-10T17:04:10.819+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): print_gm> on 2023-09-08 01:38:00+00:00
+[2023-09-10T17:04:10.852+0000] {standard_task_runner.py:57} INFO - Started process 1058 to run task
+[2023-09-10T17:04:10.875+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'bash_gm', 'print_gm', 'scheduled__2023-09-08T01:38:00+00:00', '--job-id', '111', '--raw', '--subdir', 'DAGS_FOLDER/script.py', '--cfg-path', '/tmp/tmperzlgc6r']
+[2023-09-10T17:04:10.880+0000] {standard_task_runner.py:85} INFO - Job 111: Subtask print_gm
+[2023-09-10T17:04:11.112+0000] {task_command.py:415} INFO - Running <TaskInstance: bash_gm.print_gm scheduled__2023-09-08T01:38:00+00:00 [running]> on host a4166ed6339d
+[2023-09-10T17:04:11.446+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='bash_gm' AIRFLOW_CTX_TASK_ID='print_gm' AIRFLOW_CTX_EXECUTION_DATE='2023-09-08T01:38:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-08T01:38:00+00:00'
+[2023-09-10T17:04:11.450+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-09-10T17:04:11.451+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo "Good morning, my diggers!"']
+[2023-09-10T17:04:11.495+0000] {subprocess.py:86} INFO - Output:
+[2023-09-10T17:04:11.516+0000] {subprocess.py:93} INFO - Good morning, my diggers!
+[2023-09-10T17:04:11.516+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-09-10T17:04:11.592+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=bash_gm, task_id=print_gm, execution_date=20230908T013800, start_date=20230910T170410, end_date=20230910T170411
+[2023-09-10T17:04:11.781+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-09-10T17:04:11.806+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
