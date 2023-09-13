@@ -24,7 +24,7 @@ p.s. Убедитесь в том, что в таблицу добавляютс
 	[Docker](docker-compose.yaml)
  - Sql-cкрипт для создания таблиц слоя source(DDL) 
 	[PSQL DDL source](db/DDL.sql).
- - Puthon-cкрипт для создания DAG.
+ - Python-cкрипт для создания DAG.
 	[Script](airflow/dags/script.py)
 	
 Логи:
