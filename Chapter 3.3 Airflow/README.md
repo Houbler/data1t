@@ -21,11 +21,11 @@ p.s. Убедитесь в том, что в таблицу добавляютс
 Этот проект состоит из:
 
  - Docker-compose файла.
-	[Docker](docker-compose.yml)
+	[Docker](docker-compose.yaml)
  - Sql-cкрипт для создания таблиц слоя source(DDL) 
 	[PSQL DDL source](db/DDL.sql).
  - Puthon-cкрипт для создания DAG.
-	[Clickhouse SQL](airflow/dag/script.py)
+	[Script](airflow/dags/script.py)
 	
 Логи:
  - "Good morning, diggers!"
