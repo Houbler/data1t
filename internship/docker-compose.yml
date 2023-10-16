@@ -1,0 +1,19 @@
+version: "0.1"
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    container_name: psql_presentation
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: psql_presentation
+    volumes:
+      - ./psql_db/DDL.sql:/docker-entrypoint-initdb.d/DDL.sql
+      - ./raw/:/raw/
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "user", "-d", "psql_presentation"]
+      interval: 10s
+      retries: 5
+    restart: always
