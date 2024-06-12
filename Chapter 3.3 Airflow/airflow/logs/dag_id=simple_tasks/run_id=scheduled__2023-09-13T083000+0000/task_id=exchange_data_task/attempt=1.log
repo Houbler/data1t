@@ -13,3 +13,32 @@
 [2023-09-13T08:40:07.408+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=simple_tasks, task_id=exchange_data_task, execution_date=20230913T083000, start_date=20230913T084006, end_date=20230913T084007
 [2023-09-13T08:40:07.473+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
 [2023-09-13T08:40:07.520+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-10-29T14:35:11.222+0000] {logging_mixin.py:151} INFO - Changing /opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T08:30:00+00:00/task_id=exchange_data_task permission to 509
+[2023-10-29T14:35:11.257+0000] {logging_mixin.py:151} INFO - Failed to change /opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T08:30:00+00:00/task_id=exchange_data_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T08:30:00+00:00/task_id=exchange_data_task'
+[2023-10-29T14:35:11.371+0000] {logging_mixin.py:151} INFO - Changing /opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T08:30:00+00:00/task_id=exchange_data_task permission to 509
+[2023-10-29T14:35:11.375+0000] {logging_mixin.py:151} INFO - Failed to change /opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T08:30:00+00:00/task_id=exchange_data_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T08:30:00+00:00/task_id=exchange_data_task'
+[2023-10-29T14:35:11.528+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simple_tasks.exchange_data_task scheduled__2023-09-13T08:30:00+00:00 [queued]>
+[2023-10-29T14:35:11.552+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simple_tasks.exchange_data_task scheduled__2023-09-13T08:30:00+00:00 [queued]>
+[2023-10-29T14:35:11.554+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2023-10-29T14:35:11.598+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): exchange_data_task> on 2023-09-13 08:30:00+00:00
+[2023-10-29T14:35:11.679+0000] {standard_task_runner.py:57} INFO - Started process 256 to run task
+[2023-10-29T14:35:11.679+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'simple_tasks', 'exchange_data_task', 'scheduled__2023-09-13T08:30:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/script.py', '--cfg-path', '/tmp/tmpr6da0095']
+[2023-10-29T14:35:11.742+0000] {standard_task_runner.py:85} INFO - Job 22: Subtask exchange_data_task
+[2023-10-29T14:35:12.306+0000] {logging_mixin.py:151} INFO - Changing /opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T08:30:00+00:00/task_id=exchange_data_task permission to 509
+[2023-10-29T14:35:12.311+0000] {logging_mixin.py:151} INFO - Failed to change /opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T08:30:00+00:00/task_id=exchange_data_task permission to 509: [Errno 1] Operation not permitted: '/opt/***/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T08:30:00+00:00/task_id=exchange_data_task'
+[2023-10-29T14:35:12.318+0000] {task_command.py:415} INFO - Running <TaskInstance: simple_tasks.exchange_data_task scheduled__2023-09-13T08:30:00+00:00 [running]> on host 452e7b951e9d
+[2023-10-29T14:35:15.606+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='simple_tasks' AIRFLOW_CTX_TASK_ID='exchange_data_task' AIRFLOW_CTX_EXECUTION_DATE='2023-09-13T08:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-13T08:30:00+00:00'
+[2023-10-29T14:35:18.041+0000] {logging_mixin.py:151} INFO - Connected
+[2023-10-29T14:35:18.045+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/script.py", line 35, in exchange_data
+    data = [(today, 'BTC', 'RUB', data['rates']['RUB'])]
+KeyError: 'rates'
+[2023-10-29T14:35:18.137+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=simple_tasks, task_id=exchange_data_task, execution_date=20230913T083000, start_date=20231029T143511, end_date=20231029T143518
+[2023-10-29T14:35:18.473+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 22 for task exchange_data_task ('rates'; 256)
+[2023-10-29T14:35:18.592+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-10-29T14:35:18.759+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
