@@ -1,15 +1,3 @@
+*.log
 
-*.log
-*.log
-Chapter 3.3 Airflow/airflow/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T080000+0000/task_id=exchange_data_task/attempt=1.log
-Chapter 3.3 Airflow/airflow/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T080000+0000/task_id=print_gm_task/attempt=1.log
-Chapter 3.3 Airflow/airflow/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T081000+0000/task_id=exchange_data_task/attempt=1.log
-Chapter 3.3 Airflow/airflow/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T081000+0000/task_id=print_gm_task/attempt=1.log
-Chapter 3.3 Airflow/airflow/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T082000+0000/task_id=exchange_data_task/attempt=1.log
-Chapter 3.3 Airflow/airflow/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T082000+0000/task_id=print_gm_task/attempt=1.log
-Chapter 3.3 Airflow/airflow/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T083000+0000/task_id=exchange_data_task/attempt=1.log
-Chapter 3.3 Airflow/airflow/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T083000+0000/task_id=print_gm_task/attempt=1.log
-Chapter 3.3 Airflow/airflow/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T084000+0000/task_id=exchange_data_task/attempt=1.log
-Chapter 3.3 Airflow/airflow/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T084000+0000/task_id=print_gm_task/attempt=1.log
-Chapter 3.3 Airflow/airflow/logs/dag_processor_manager/dag_processor_manager.log
-Chapter 3.3 Airflow/airflow/logs/dag_id=simple_tasks/run_id=scheduled__2023-09-13T080000+0000/task_id=exchange_data_task/attempt=1.log
+
