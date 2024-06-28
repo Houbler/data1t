@@ -20,6 +20,7 @@ GP — в отличии от Postgres — распределенная сист
 ```
 
 Для поднятия Greenplum использовался образ с [Dockerhub](https://hub.docker.com/r/andruche/greenplum).
+
 Запуск: 
 docker pull andruche/greenplum
 docker run --name greenplum -p 5432:5432 -d andruche/greenplum:7.0.0
