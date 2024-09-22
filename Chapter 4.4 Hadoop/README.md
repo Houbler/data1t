@@ -10,8 +10,8 @@
 
 ### Запуск
 
- - git clone https://github.com/tech4242/docker-hadoop-hive-parquet.git (в заранее созданной папке)
- - Открываем консоль, переходим в папку, где расположен файл.
+ - git clone https://github.com/Houbler/data1t/tree/main/Chapter%204.4%20Hadoop (в заранее созданной папке)
+ - Открываем консоль, переходим в папку hadoop-hive-parquet
  - Вводим: docker-compose up
  
  Как только образ собран, а контейнер поднят — заходим по http://localhost:8888/hue и попадаем в HUE. Придумываем произвольную пару логина-пароля для будущей авторизации и приступаем к работе. 
