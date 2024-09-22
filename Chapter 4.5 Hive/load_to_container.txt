@@ -1,0 +1,18 @@
+Выводим список всех работающих контейнеров в Docker
+```docker ps```
+
+Копируем данные из текущей директории (./) на хосте в директорию /usr/local/data внутри контейнера
+```docker cp ./ <container_id>:/usr/local/data```
+
+Запускаем интерактивную сессию командной оболочки (bash) внутри контейнера
+```docker exec -it <container_id> /bin/bash```
+
+Создаем директории в файловой системе Hadoop (HDFS)
+```hadoop fs -mkdir /user/admin/orgs```
+```hadoop fs -mkdir /user/admin/peop```
+```hadoop fs -mkdir /user/admin/cust```
+
+Загружаем локальные файлы в HDFS
+```hadoop fs -put /usr/local/data/organizations.csv /user/admin/orgs/organizations.csv```
+```hadoop fs -put /usr/local/data/people.csv /user/admin/peop/people.csv```
+```hadoop fs -put /usr/local/data/customers.csv /user/admin/cust/customers.csv```
